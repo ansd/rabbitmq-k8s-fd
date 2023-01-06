@@ -24,7 +24,7 @@ gcloud beta container --project "$GCP_PROJECT" clusters create "test" \
     --monitoring=SYSTEM \
     --enable-ip-alias \
     --network "projects/$GCP_PROJECT/global/networks/default" \
-    --subnetwork "projects/$GCP_PROJECT/regions/europe-west3/subnetworks/default" \
+    --subnetwork "projects/$GCP_PROJECT/regions/$GCP_REGION/subnetworks/default" \
     --no-enable-intra-node-visibility \
     --default-max-pods-per-node "110" \
     --no-enable-master-authorized-networks \
