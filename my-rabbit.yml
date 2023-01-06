@@ -1,0 +1,19 @@
+---
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: my-rabbit
+spec:
+  replicas: 1
+  image: {{docker_username}}/rabbitmq-fd:0.1.0
+  override:
+    statefulSet:
+      spec:
+        template:
+          spec:
+            containers:
+            - name: rabbitmq
+              securityContext:
+                capabilities:
+                  add:
+                    - SYS_RESOURCE

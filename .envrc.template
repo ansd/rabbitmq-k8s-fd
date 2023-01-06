@@ -1,0 +1,4 @@
+export GCP_ZONE="my-zone"
+export GCP_PROJECT="my-project-name"
+export DOCKER_USERNAME="my-dockerhub-username"
+export DOCKER_PASSWORD="my-dockerhub-password"
